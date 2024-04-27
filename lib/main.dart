@@ -1,3 +1,4 @@
+import 'package:finance_app/view/login/social_login.dart';
 import 'package:finance_app/view/login/welcome_view.dart';
 import 'package:flutter/material.dart';
 import 'package:finance_app/common/color_extension.dart';
@@ -25,7 +26,7 @@ class MainApp extends StatelessWidget {
         ),
         useMaterial3: false,
       ),
-      home: const WelcomeView(),
+      home: const SocialLoginView(),
     );
   }
 }

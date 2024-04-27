@@ -18,7 +18,9 @@ class PrimaryButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        onPressed();
+      },
       child: Container(
         height: 50.0,
         decoration: BoxDecoration(

@@ -60,9 +60,11 @@ class _WelcomeViewState extends State<WelcomeView> {
                     title: "Get Started",
                     onPressed: () {
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SocialLoginView()));
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SocialLoginView(),
+                        ),
+                      );
                     },
                   ),
                   const SizedBox(

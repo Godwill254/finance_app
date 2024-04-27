@@ -1,6 +1,7 @@
 import "package:finance_app/common/color_extension.dart";
 import "package:finance_app/common_widgets/primary_button.dart";
 import "package:finance_app/common_widgets/secondary_button.dart";
+import "package:finance_app/view/login/social_login.dart";
 import "package:flutter/material.dart";
 import "package:flutter/services.dart";
 
@@ -57,7 +58,12 @@ class _WelcomeViewState extends State<WelcomeView> {
                   ),
                   PrimaryButton(
                     title: "Get Started",
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SocialLoginView()));
+                    },
                   ),
                   const SizedBox(
                     height: 30,

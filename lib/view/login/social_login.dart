@@ -1,6 +1,7 @@
 import "package:finance_app/common/color_extension.dart";
 
 import "package:finance_app/common_widgets/secondary_button.dart";
+import "package:finance_app/view/login/sign_up_view.dart";
 import "package:flutter/material.dart";
 
 class SocialLoginView extends StatefulWidget {
@@ -28,6 +29,7 @@ class _SocialLoginView extends State<SocialLoginView> {
                 fit: BoxFit.contain,
               ),
               const Spacer(),
+              // Apple ID sign up button
               InkWell(
                 onTap: () {},
                 child: Container(
@@ -69,6 +71,7 @@ class _SocialLoginView extends State<SocialLoginView> {
               const SizedBox(
                 height: 20,
               ),
+              // Google sign up button
               InkWell(
                 onTap: () {},
                 child: Container(
@@ -80,7 +83,7 @@ class _SocialLoginView extends State<SocialLoginView> {
                     borderRadius: BorderRadius.circular(30),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.blue.withOpacity(0.35),
+                        color: Colors.white.withOpacity(0.35),
                         blurRadius: 5,
                         offset: const Offset(0, 5),
                       ),
@@ -166,9 +169,18 @@ class _SocialLoginView extends State<SocialLoginView> {
               const SizedBox(
                 height: 25,
               ),
+              //Sign up button
               SecondaryButton(
-                title: "Sign In",
-                onPressed: () {},
+                title: "Sign Up",
+                // Navigation to the Sign up page
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignUpView(),
+                    ),
+                  );
+                },
               ),
               const SizedBox(
                 height: 25,

@@ -1,3 +1,4 @@
+import 'package:finance_app/view/login/sign_up_view.dart';
 import 'package:finance_app/view/login/social_login.dart';
 import 'package:finance_app/view/login/welcome_view.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +27,7 @@ class MainApp extends StatelessWidget {
         ),
         useMaterial3: false,
       ),
-      home: const SocialLoginView(),
+      home: const SignUpView(),
     );
   }
 }

@@ -12,9 +12,9 @@ class RoundTextField extends StatelessWidget {
   const RoundTextField({
     super.key,
     required this.title,
-    required this.controller,
-    required this.keyboardtype,
-     this.obscureText = false,
+    this.controller,
+    this.keyboardtype,
+    this.obscureText = false,
   });
 
   @override

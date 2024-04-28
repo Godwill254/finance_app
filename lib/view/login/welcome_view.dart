@@ -1,6 +1,7 @@
 import "package:finance_app/common/color_extension.dart";
 import "package:finance_app/common_widgets/primary_button.dart";
 import "package:finance_app/common_widgets/secondary_button.dart";
+import "package:finance_app/view/login/sign_in_view.dart";
 import "package:finance_app/view/login/social_login.dart";
 import "package:flutter/material.dart";
 import "package:flutter/services.dart";
@@ -72,7 +73,14 @@ class _WelcomeViewState extends State<WelcomeView> {
                   ),
                   SecondaryButton(
                     title: "Sign In",
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SignInView(),
+                        ),
+                      );
+                    },
                   ),
                 ],
               ),

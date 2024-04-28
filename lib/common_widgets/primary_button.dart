@@ -30,9 +30,9 @@ class PrimaryButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(30),
           boxShadow: [
             BoxShadow(
-              color: TColor.secondary.withOpacity(0.5),
-              blurRadius: 5,
-              offset: const Offset(0, 5),
+              color: TColor.secondary.withOpacity(0.25),
+              blurRadius: 10,
+              offset: const Offset(0, 4),
             ),
           ],
         ),

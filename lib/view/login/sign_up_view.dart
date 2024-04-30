@@ -44,7 +44,7 @@ class _SignUpViewState extends State<SignUpView> {
                 height: 20,
               ),
               RoundTextField(
-                title: " Password",
+                title: "Password",
                 keyboardtype: TextInputType.emailAddress,
                 obscureText: true,
                 controller: txtPassword,

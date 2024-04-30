@@ -2,6 +2,7 @@ import 'package:finance_app/view/login/sign_in_view.dart';
 import 'package:finance_app/view/login/sign_up_view.dart';
 import 'package:finance_app/view/login/social_login.dart';
 import 'package:finance_app/view/login/welcome_view.dart';
+import 'package:finance_app/view/main_tabview/main_tab_view.dart';
 import 'package:flutter/material.dart';
 import 'package:finance_app/common/color_extension.dart';
 
@@ -28,7 +29,7 @@ class MainApp extends StatelessWidget {
         ),
         useMaterial3: false,
       ),
-      home: const SignInView(),
+      home: const MainTabView(),
     );
   }
 }

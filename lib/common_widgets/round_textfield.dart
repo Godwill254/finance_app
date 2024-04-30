@@ -41,9 +41,21 @@ class RoundTextField extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
           ),
           child: TextField(
+            style: TextStyle(
+              color: Colors.white,
+            ),
             controller: controller,
+            cursorColor: Colors.white60,
             decoration: InputDecoration(
-              focusedBorder: InputBorder.none,
+              contentPadding: EdgeInsets.symmetric(
+                vertical: 0,
+                horizontal: 10,
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  color: Colors.white,
+                ),
+              ),
               errorBorder: InputBorder.none,
               enabledBorder: InputBorder.none,
             ),

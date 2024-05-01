@@ -2,6 +2,8 @@
 
 import "package:finance_app/common/color_extension.dart";
 import "package:finance_app/common_widgets/segment_button.dart";
+import "package:finance_app/common_widgets/subscription_home_row.dart";
+import "package:finance_app/common_widgets/upcoming_bill_row.dart";
 import "package:flutter/material.dart";
 
 class HomeView extends StatefulWidget {
@@ -102,13 +104,30 @@ class _HomeView extends State<HomeView> {
                 ],
               ),
             ),
-            ListView.builder(
-              physics: const NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              itemCount: subArr.length,
-              itemBuilder: (context, index) {
-                var sObj = subArr[index] as Map? ?? {};
-              },
+            if (isSubscription)
+              ListView.builder(
+                padding: EdgeInsets.all(20),
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: subArr.length,
+                itemBuilder: (context, index) {
+                  var sObj = subArr[index] as Map? ?? {};
+                  return SubscriptionHomeRow(sObj: sObj, onPressed: () {});
+                },
+              ),
+            if (!isSubscription)
+              ListView.builder(
+                padding: EdgeInsets.all(20),
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: subArr.length,
+                itemBuilder: (context, index) {
+                  var sObj = subArr[index] as Map? ?? {};
+                  return UpcomingBillRow(sObj: sObj, onPressed: () {});
+                },
+              ),
+            SizedBox(
+              height: 150,
             ),
           ],
         ),

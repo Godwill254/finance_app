@@ -1,11 +1,11 @@
 import "package:finance_app/common/color_extension.dart";
 import "package:flutter/material.dart";
 
-class SubscriptionHomeRow extends StatelessWidget {
+class UpcomingBillRow extends StatelessWidget {
   final Map sObj;
   final VoidCallback onPressed;
 
-  const SubscriptionHomeRow({
+  const UpcomingBillRow({
     super.key,
     required this.sObj,
     required this.onPressed,
@@ -29,13 +29,37 @@ class SubscriptionHomeRow extends StatelessWidget {
           ),
           child: Row(
             children: [
-              const SizedBox(
-                width: 8,
-              ),
-              Image.asset(
-                sObj["icon"],
-                width: 40,
+              Container(
                 height: 40,
+                // padding: const EdgeInsets.all(5),
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: TColor.gray70.withOpacity(0.5),
+                  border: Border.all(
+                    color: TColor.border.withOpacity(0.15),
+                  ),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Column(
+                  children: [
+                    Text(
+                      "June",
+                      style: TextStyle(
+                        color: TColor.gray60,
+                        fontSize: 10,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    Text(
+                      "25",
+                      style: TextStyle(
+                        color: TColor.gray30,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(
                 width: 8,

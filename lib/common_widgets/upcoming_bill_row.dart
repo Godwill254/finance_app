@@ -18,7 +18,7 @@ class UpcomingBillRow extends StatelessWidget {
       child: InkWell(
         onTap: onPressed,
         child: Container(
-          height: 64,
+          height: 70,
           padding: const EdgeInsets.all(10),
           alignment: Alignment.center,
           decoration: BoxDecoration(
@@ -30,7 +30,8 @@ class UpcomingBillRow extends StatelessWidget {
           child: Row(
             children: [
               Container(
-                height: 40,
+                height: 50,
+                width: 40,
                 // padding: const EdgeInsets.all(5),
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
@@ -40,25 +41,28 @@ class UpcomingBillRow extends StatelessWidget {
                   ),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Column(
-                  children: [
-                    Text(
-                      "June",
-                      style: TextStyle(
-                        color: TColor.gray60,
-                        fontSize: 10,
-                        fontWeight: FontWeight.w500,
+                child: Padding(
+                  padding: const EdgeInsets.all(6.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        "June",
+                        style: TextStyle(
+                          color: TColor.gray60,
+                          fontSize: 10,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
-                    ),
-                    Text(
-                      "25",
-                      style: TextStyle(
-                        color: TColor.gray30,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
+                      Text(
+                        "25",
+                        style: TextStyle(
+                          color: TColor.gray30,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
               const SizedBox(

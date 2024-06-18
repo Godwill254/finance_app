@@ -2,6 +2,7 @@
 
 import "package:finance_app/common/color_extension.dart";
 import "package:finance_app/common_widgets/segment_button.dart";
+import "package:finance_app/common_widgets/status_button.dart";
 import "package:finance_app/common_widgets/subscription_home_row.dart";
 import "package:finance_app/common_widgets/upcoming_bill_row.dart";
 import "package:flutter/material.dart";
@@ -65,6 +66,58 @@ class _HomeView extends State<HomeView> {
                     25,
                   ),
                 ),
+              ),
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Image.asset("assets/images/home_bg.png"),
+                  Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Column(
+                      children: [
+                        Spacer(),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: StatusButton(
+                                title: "Active subs",
+                                value: "12",
+                                statusColor: TColor.secondary,
+                                onPressed: () {},
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Expanded(
+                              child: StatusButton(
+                                title: "Highest subs",
+                                value: "\$12.99",
+                                statusColor: TColor.primary10,
+                                onPressed: () {},
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Expanded(
+                              child: StatusButton(
+                                title: "Lowest subs",
+                                value: "\$2.99",
+                                statusColor: TColor.secondaryG,
+                                onPressed: () {},
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
             Container(
